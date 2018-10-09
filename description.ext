@@ -1,0 +1,35 @@
+
+
+	#include "W_Teleporter\dialog.hpp"
+
+	class CfgFunctions 
+	{
+
+		#include "W_Teleporter\CfgFunctions.hpp"
+		#include "Redd_Loadout\CfgFunctions.hpp"
+		
+	};
+	
+	class Header
+	{
+
+		gameType = "coop";
+		minPlayers = "1";
+		maxPlayers = "56";
+
+	};
+
+	respawn = 3;
+	respawnDelay = 5;
+	respawnDialog = false;
+	
+	corpseLimit = 50;
+	corpseRemovalMinTime = 300;
+	corpseRemovalMaxTime = 1200;
+	
+	onLoadMission = "Horrido – Joho!";
+	OnLoadMissionTime = true;
+	author="[TTT] Redd u. [TTT] SchmidtLR";
+	OnLoadName = "World Conflict";
+	disabledAI = 1;
+	cba_settings_hasSettingsFile = 1;

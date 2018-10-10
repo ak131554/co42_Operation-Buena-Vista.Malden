@@ -1,0 +1,10 @@
+Gelb 3-4
+Schwarz 8
+Rot 8
+Violett 8
+Blau 4
+Gold 2
+Platin 2
+Silber 4
+Braun 3-4
+

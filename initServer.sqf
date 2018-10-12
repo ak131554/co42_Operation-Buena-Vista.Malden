@@ -167,23 +167,24 @@
 	//Munikisten ca. 1 Gruppenstartloadout//
 	////////////////////////////////////////
 
-	// //AT
-	// {
+	//AT
+	{
 	
-		// _x addItemCargoGlobal ["BWA3_Pzf3_Loaded", 2];
+		_x addItemCargoGlobal ["BWA3_PzF3_Tandem_Loaded", 2];
 		
-	// }
-	// forEach [at_muni_1,at_muni_2,at_muni_3,at_muni_4,at_muni_5,at_muni_6,at_muni_7,at_muni_8];
+	}
+	forEach [at_muni_1,at_muni_2,at_muni_3,at_muni_4,at_muni_5,at_muni_6,at_muni_7,at_muni_8];
 
-	// //MG
-	// {
+	//MG
+	{
 	
-		// _x addItemCargoGlobal ["hlc_250Rnd_762x51_M_MG3", 6];
-		// _x addItemCargoGlobal ["hlc_100Rnd_762x51_M_MG3", 3];
-		// _x addItemCargoGlobal ["ACE_SpareBarrel", 1];
+		_x addItemCargoGlobal ["hlc_250Rnd_762x51_M_MG3", 6];
+		_x addItemCargoGlobal ["hlc_100Rnd_762x51_M_MG3", 4];
+		_x addItemCargoGlobal ["hlc_50Rnd_762x51_M_MG3", 4];
+		_x addItemCargoGlobal ["ACE_SpareBarrel", 2];
 		
-	// }
-	// forEach [mg_muni_1,mg_muni_2,mg_muni_3,mg_muni_4,mg_muni_5,mg_muni_6,mg_muni_7,mg_muni_8];
+	}
+	forEach [mg_muni_1,mg_muni_2,mg_muni_3,mg_muni_4];
 
 	// //Mörser
 	// {

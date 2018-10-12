@@ -1,13 +1,14 @@
 
 
 	#include "W_Teleporter\dialog.hpp"
+	#include "spec_crateNaming\DescriptionExt.hpp"
 
 	class CfgFunctions 
 	{
 
 		#include "W_Teleporter\CfgFunctions.hpp"
 		#include "Redd_Loadout\CfgFunctions.hpp"
-		
+		#include "spec_crateNaming\CfgFunctions.hpp"
 	};
 	
 	class Header

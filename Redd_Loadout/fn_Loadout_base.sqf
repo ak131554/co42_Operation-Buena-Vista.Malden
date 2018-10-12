@@ -46,6 +46,9 @@
 
 		//Mörser
 		case "B_support_Mort_F": {_null = [_unit,_loadout,_tarn,_isFalli] call compile preProcessFileLineNumbers "loadouts\mor.sqf";};
+		
+		//Unbewaffnet
+		case "B_Survivor_F": {_null = [_unit,_loadout,_tarn,_isFalli] call compile preProcessFileLineNumbers "loadouts\unarmed.sqf";};
 
 		default {};
 		

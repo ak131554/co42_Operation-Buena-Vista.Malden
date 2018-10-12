@@ -163,9 +163,9 @@
 	// } 
 	// forEach [mor_veh_1,mor_veh_2,mor_veh_3,mor_veh_4];
 
-	// ////////////////////////////////////////
-	// //Munikisten ca. 1/2 Truppstartloadout//
-	// ////////////////////////////////////////
+	////////////////////////////////////////
+	//Munikisten ca. 1 Gruppenstartloadout//
+	////////////////////////////////////////
 
 	// //AT
 	// {
@@ -220,47 +220,39 @@
 	// }
 	// forEach [pio_muni_1,pio_muni_2,pio_muni_3,pio_muni_4];
 
-	// //Inf
-	// {
+	//Inf
+	{
 	
-		// _x addItemCargoGlobal ["hlc_30rnd_556x45_EPR_G36", 15];
-		// _x addItemCargoGlobal ["hlc_30rnd_556x45_Tracers_G36", 3];
-		// _x addItemCargoGlobal ["hlc_20rnd_762x51_b_G3", 3];
-		// _x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 10];
-		// _x addItemCargoGlobal ["CUP_HandGrenade_M67", 5];
-		// _x addItemCargoGlobal ["SmokeShell", 16];
-		// _x addItemCargoGlobal ["SmokeShellPurple", 2];
-		// _x addItemCargoGlobal ["SmokeShellRed", 2];
-		// _x addItemCargoGlobal ["SmokeShellGreen", 2];
-		// _x addItemCargoGlobal ["1Rnd_HE_Grenade_shell", 6];
-		// _x addItemCargoGlobal ["rhs_mag_mk84",4];
-		// _x addItemCargoGlobal ["Chemlight_green",4];
-		// _x addItemCargoGlobal ["B_IR_Grenade",1];
-		// _x addItemCargoGlobal ["ACE_CableTie",8];
-		// _x addItemCargoGlobal ["ACE_HuntIR_M203",4];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_Tracer", 7];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 28];
+		_x addItemCargoGlobal ["BWA3_200Rnd_556x45", 8];
+		_x addItemCargoGlobal ["hlc_20rnd_762x51_b_G3", 5];
+		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 10];
+		_x addItemCargoGlobal ["CUP_HandGrenade_M67", 10];
+		_x addItemCargoGlobal ["SmokeShell", 24];
+		_x addItemCargoGlobal ["SmokeShellPurple", 5];
+		_x addItemCargoGlobal ["SmokeShellRed", 5];
+		_x addItemCargoGlobal ["SmokeShellGreen", 5];
+		_x addItemCargoGlobal ["rhs_mag_mk84",8];
+		_x addItemCargoGlobal ["Chemlight_green",8];
+		_x addItemCargoGlobal ["B_IR_Grenade",2];
+		_x addItemCargoGlobal ["ACE_CableTie",8];
+		_x addItemCargoGlobal ["ACE_HuntIR_M203",4];
 
-	// }
-	// forEach 
-	// [
+	}
+	forEach 
+	[
 		
-		// inf_muni_1,
-		// inf_muni_2,
-		// inf_muni_3,
-		// inf_muni_4,
-		// inf_muni_5,
-		// inf_muni_6,
-		// inf_muni_7,
-		// inf_muni_8,
-		// inf_muni_9,
-		// inf_muni_10,
-		// inf_muni_11,
-		// inf_muni_12,
-		// inf_muni_13,
-		// inf_muni_14,
-		// inf_muni_15,
-		// inf_muni_16
+		inf_muni_1,
+		inf_muni_2,
+		inf_muni_3,
+		inf_muni_4,
+		inf_muni_5,
+		inf_muni_6,
+		inf_muni_7,
+		inf_muni_8
 
-	// ];
+	];
 
 	// //AusrüstungsKisten
 	// {

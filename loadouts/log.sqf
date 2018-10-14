@@ -131,8 +131,8 @@
 		for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 	};
 	if (_tarn isEqualTo "army_d") then {
-		for "_i" from 1 to 4 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
-		for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+		for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+		for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
 		for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
 	};
 
@@ -140,16 +140,16 @@
 	
 	//vest base items
 	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "BWA3_DM25";};
-		for "_i" from 1 to 1 do {_unit addItemToBackpack "BWA3_DM32_Purple";};
-		for "_i" from 1 to 1 do {_unit addItemToBackpack "BWA3_DM32_Red";};
-		for "_i" from 1 to 1 do {_unit addItemToBackpack "BWA3_DM32_Green";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM25";};
+		for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Purple";};
+		for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Red";};
+		for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Green";};
 	};
 	if (_tarn isEqualTo "army_d") then {
-		for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
-		for "_i" from 1 to 1 do {_unit addItemToBackpack "SmokeShellPurple";};
-		for "_i" from 1 to 1 do {_unit addItemToBackpack "SmokeShellRed";};
-		for "_i" from 1 to 1 do {_unit addItemToBackpack "SmokeShellGreen";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
+		for "_i" from 1 to 1 do {_unit addItemToVest "SmokeShellPurple";};
+		for "_i" from 1 to 1 do {_unit addItemToVest "SmokeShellRed";};
+		for "_i" from 1 to 1 do {_unit addItemToVest "SmokeShellGreen";};
 	};
 	for "_i" from 1 to 6 do {_unit addItemToVest "ACE_fieldDressing";};
 	for "_i" from 1 to 6 do {_unit addItemToVest "ACE_packingBandage";};

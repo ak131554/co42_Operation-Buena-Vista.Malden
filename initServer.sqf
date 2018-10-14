@@ -282,12 +282,32 @@
 	}
 	forEach [sanKiste_1,sanKiste_2,sanKiste_3,sanKiste_4,sanKiste_5,sanKiste_6];
 	
+	{
+	
+		_x addItemCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 14];
+		_x addItemCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", 4];
+		_x addItemCargoGlobal ["SmokeShell", 10];
+		_x addItemCargoGlobal ["SmokeShellPurple", 4];
+		_x addItemCargoGlobal ["SmokeShellRed", 4];
+		_x addItemCargoGlobal ["SmokeShellGreen", 4];
+		_x addItemCargoGlobal ["Chemlight_green",4];
+		_x addItemCargoGlobal ["B_IR_Grenade",2];
+		_x addItemCargoGlobal ["ACE_CableTie",4];
+
+	}
+	forEach 
+	[
+		
+		us_muni_1
+
+	];
+	
 	[] spawn
 	{
 		sleep 30;
 		
 		[inf_muni_box,100] call ace_cargo_fnc_setSpace; 
-		[inf_muni_box,[inf_muni_1,inf_muni_2,inf_muni_3,inf_muni_4,inf_muni_5,inf_muni_6,inf_muni_7,inf_muni_8,mg_muni_1,mg_muni_2,mg_muni_3,mg_muni_4]] spawn compile preprocessFileLineNumbers "scripts\loadIn.sqf";
+		[inf_muni_box,[inf_muni_1,inf_muni_2,inf_muni_3,inf_muni_4,inf_muni_5,inf_muni_6,inf_muni_7,inf_muni_8,mg_muni_1,mg_muni_2,mg_muni_3,mg_muni_4,us_muni_1]] spawn compile preprocessFileLineNumbers "scripts\loadIn.sqf";
 
 		[at_muni_box,100] call ace_cargo_fnc_setSpace; 
 		[at_muni_box,[at_muni_1,at_muni_2,at_muni_3,at_muni_4,at_muni_5,at_muni_6,at_muni_7,at_muni_8]] spawn compile preprocessFileLineNumbers "scripts\loadIn.sqf";

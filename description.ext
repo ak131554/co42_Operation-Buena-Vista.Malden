@@ -28,9 +28,9 @@
 	corpseRemovalMinTime = 300;
 	corpseRemovalMaxTime = 1200;
 	
-	onLoadMission = "Horrido – Joho!";
+	onLoadMission = "Blaukraut bleibt Blaukraut und Brautkleid bleibt Brautkleid";
 	OnLoadMissionTime = true;
-	author="[TTT] Redd u. [TTT] SchmidtLR";
-	OnLoadName = "World Conflict";
+	author="[TTT] Epsilon";
+	OnLoadName = "OP Buena Vista";
 	disabledAI = 1;
 	cba_settings_hasSettingsFile = 1;

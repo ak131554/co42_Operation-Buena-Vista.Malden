@@ -19,6 +19,7 @@
 	if (_tarn isEqualTo "trope_idz") then {_uniform = selectRandom ["BWA3_Uniform_Tropen","BWA3_Uniform_sleeves_Tropen"];};
 	if (_tarn isEqualTo "winter") then {_uniform = selectRandom ["rnt_bw_wintertarn_uniform_item","rnt_bw_wintertarn_uniform_item_2","rnt_bw_wintertarn_uniform_item_3"];};
 	if (_tarn isEqualTo "winter_idz") then {_uniform = selectRandom ["rnt_bw_wintertarn_uniform_item","rnt_bw_wintertarn_uniform_item_2","rnt_bw_wintertarn_uniform_item_3"];};
+	if (_tarn isEqualTo "army_d") then {_uniform = "rhs_uniform_cu_ocp";};
 	_unit forceAddUniform _uniform;
 
 	//Add vest
@@ -35,6 +36,7 @@
 			if (_tarn isEqualTo "trope_idz") then {_vest = "BWA3_Vest_Leader_Tropen"};
 			if (_tarn isEqualTo "winter") then {_vest = "pbw_koppel_grpfhr"};
 			if (_tarn isEqualTo "winter_idz") then {_vest = "pbw_koppel_grpfhr"};
+			if (_tarn isEqualTo "army_d") then {_vest = "rhsusf_iotv_ocp_Repair"};
 
 		};
 
@@ -47,6 +49,7 @@
 			if (_tarn isEqualTo "trope_idz") then {_vest = "BWA3_Vest_Rifleman_Tropen"};
 			if (_tarn isEqualTo "winter") then {_vest = "pbw_koppel_schtz"};
 			if (_tarn isEqualTo "winter_idz") then {_vest = "pbw_koppel_schtz"};
+			if (_tarn isEqualTo "army_d") then {_vest = "rhsusf_iotv_ocp_Repair"};
 
 		};
 
@@ -103,7 +106,7 @@
 
 	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz")) then
 	{_goggles = selectRandom goggles_array_fleck};
-	if ((_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz")) then
+	if ((_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "army_d")) then
 	{_goggles = selectRandom goggles_array_trope};
 	if ((_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then
 	{_goggles = selectRandom goggles_array_winter};
@@ -118,20 +121,36 @@
 	if (_tarn isEqualTo "trope_idz") then {_headgear = "rhsusf_opscore_ut_pelt";};
 	if (_tarn isEqualTo "winter") then {_headgear = "rnt_bw_wintertarn_helm_item"};
 	if (_tarn isEqualTo "winter_idz") then {_headgear = "rnt_bw_wintertarn_helm_item";};
+	if (_tarn isEqualTo "army_d") then {_headgear = "rhsusf_patrolcap_ocp";};
 	_unit addHeadgear _headgear;
 
 	//Add magazines
-	for "_i" from 1 to 4 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
+	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
+		for "_i" from 1 to 4 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
+		for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
+	};
+	if (_tarn isEqualTo "army_d") then {
+		for "_i" from 1 to 4 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+		for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
+	};
 
 	//uniform base items
-	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-
+	
 	//vest base items
-	for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM25";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Purple";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Red";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Green";};
+	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "BWA3_DM25";};
+		for "_i" from 1 to 1 do {_unit addItemToBackpack "BWA3_DM32_Purple";};
+		for "_i" from 1 to 1 do {_unit addItemToBackpack "BWA3_DM32_Red";};
+		for "_i" from 1 to 1 do {_unit addItemToBackpack "BWA3_DM32_Green";};
+	};
+	if (_tarn isEqualTo "army_d") then {
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
+		for "_i" from 1 to 1 do {_unit addItemToBackpack "SmokeShellPurple";};
+		for "_i" from 1 to 1 do {_unit addItemToBackpack "SmokeShellRed";};
+		for "_i" from 1 to 1 do {_unit addItemToBackpack "SmokeShellGreen";};
+	};
 	for "_i" from 1 to 6 do {_unit addItemToVest "ACE_fieldDressing";};
 	for "_i" from 1 to 6 do {_unit addItemToVest "ACE_packingBandage";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_tourniquet";};
@@ -148,12 +167,6 @@
 
 	};
 
-	//Add helmet
-	_helmet = "";
-	if (_tarn isEqualTo "fleck") then {_helmet = "PBW_Helm1_Fleck_H"};
-	if (_tarn isEqualTo "trope") then {_helmet = "PBW_Helm1_tropen_H"};
-	_unit addItemToVest _helmet;
-
 	//Add weapons
 	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "winter")) then 
 	{
@@ -163,6 +176,7 @@
 
 		_unit addPrimaryWeaponItem "BWA3_optic_RSAS_G36A2";
 		_unit addPrimaryWeaponItem "BWA3_acc_LLM01_irlaser";
+		_unit addWeapon "BWA3_P8";
 
 	};
 	if ((_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter_idz")) then 
@@ -174,9 +188,15 @@
 		_unit addPrimaryWeaponItem "BWA3_optic_ZO4x30_MicroT2";
 		_unit addPrimaryWeaponItem "BWA3_acc_LLM01_irlaser";
 		_unit addPrimaryWeaponItem "BWA3_bipod_Harris";
+		_unit addWeapon "BWA3_P8";
 		
 	};
-	_unit addWeapon "BWA3_P8";
+	if (_tarn isEqualTo "army_d") then
+	{
+		_unit addWeapon "rhs_weap_m4_carryhandle";
+		_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+		_unit addWeapon "rhsusf_weap_m9";
+	};
 
 	//Add items
 	_unit linkItem "ItemMap";
@@ -185,19 +205,32 @@
 	_unit linkItem "TFAR_anprc152";
 
 	//Add another magazines
-	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
-	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
+	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
+		for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
+		for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
+	};
+	if (_tarn isEqualTo "army_d") then {
+		for "_i" from 1 to 1 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+		for "_i" from 1 to 1 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
+	};
 
 	//Add backpack
 	_backpack = "";
 	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz"))then {_backpack = "TFAR_rt1523g_big_bwmod";};
 	if ((_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz"))then {_backpack = "TFAR_rt1523g_big_bwmod_tropen";};
 	if ((_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz"))then {_backpack = "TFAR_rt1523g_big_bwmod";};
+	if (_tarn isEqualTo "army_d") then {_backpack = "TFAR_rt1523g_big_rhs";};
 	_unit addBackpack _backpack;
 
 	//Add Backpack items
 	for "_i" from 1 to 1 do {_unit addItemToBackpack "ToolKit";};
+	
+	//Add helmet
+	if (_tarn isEqualTo "fleck") then {_unit addItemToVest "PBW_Helm1_Fleck_H"};
+	if (_tarn isEqualTo "trope") then {_unit addItemToVest "PBW_Helm1_tropen_H"};
+	if (_tarn isEqualTo "army_d") then {_unit addItemToBackpack "rhsusf_ach_helmet_ocp";};
 
+	
 	_unit setVariable ["ACE_IsEngineer",true,true];
 
 	////Slot specifications
@@ -231,17 +264,20 @@
 
 			_unit linkItem "ACE_DK10_b";
 			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_HelmetCam";};
-			_insignie = selectRandom _grpFhrArray;
-			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
-
+			if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
+				_insignie = selectRandom _grpFhrArray;
+				[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			};
 		};
 
 		case "log_k":
 		{
 
 			_unit linkItem "ACE_GD300_b";
-			_insignie = selectRandom _mannschafterArray;
-			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
+				_insignie = selectRandom _mannschafterArray;
+				[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			};
 
 		};
 

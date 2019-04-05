@@ -105,7 +105,6 @@
 		_x addItemCargoGlobal ["ACE_salineIV",4];
 		_x addItemCargoGlobal ["ACE_bodyBag",10];
 		_x addBackpackCargoGlobal ["ACE_TacticalLadder_Pack",1];
-		
 	} 
 	forEach [san_veh_1];
 
@@ -133,6 +132,24 @@
 
 	} 
 	forEach [rec_veh_1];
+	
+	//Ammotrucks
+	{
+		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
+		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
+		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
+		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
+		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
+		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
+		
+		[_x, "rhs_mag_M151_19"] call ace_rearm_fnc_addMagazineToSupply;
+		[_x, "rhs_mag_AGM114K_4"] call ace_rearm_fnc_addMagazineToSupply;
+		[_x, "rhs_mag_AGM114N_4"] call ace_rearm_fnc_addMagazineToSupply;
+		[_x, "30Rnd_CMFlare_Chaff_Magazine"] call ace_rearm_fnc_addMagazineToSupply;
+		[_x, "rhs_mag_30x113mm_M789_HEDP_1200"] call ace_rearm_fnc_addMagazineToSupply;
+		[_x, "rhs_mag_30x113mm_M789_HEDP_1200", 15000] call ace_rearm_fnc_removeMagazineFromSupply;
+	}
+	forEach [ammoTruck1];
 
 	////////////////////////////////////////
 	//Munikisten ca. 1 Gruppenstartloadout//
@@ -295,12 +312,7 @@
 		_x addItemCargoGlobal ["ACE_CableTie",4];
 
 	}
-	forEach 
-	[
-		
-		us_muni_1
-
-	];
+	forEach [us_muni_1];
 	
 	[] spawn
 	{

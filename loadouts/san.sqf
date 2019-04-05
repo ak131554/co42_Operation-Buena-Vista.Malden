@@ -353,7 +353,9 @@
 
 	_unit setVariable ["ace_medical_medicClass",2,true];
 
-	[_unit,"UK3CB_BAF_Insignia_RedCross"] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+	[_unit,"MedB"] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+	
+	[_unit,"buildTent","Baue Medic-Zelt auf","Medic-Zelt",1] call Spec_construct_fnc_playerAddConstructAction;
 	
 	////Slot specifications
 	switch toLower (_loadout) do

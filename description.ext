@@ -5,10 +5,10 @@
 
 	class CfgFunctions 
 	{
-
 		#include "W_Teleporter\CfgFunctions.hpp"
 		#include "Redd_Loadout\CfgFunctions.hpp"
 		#include "spec_crateNaming\CfgFunctions.hpp"
+		#include "spec_construct\CfgFunctions.hpp"
 	};
 	
 	class Header

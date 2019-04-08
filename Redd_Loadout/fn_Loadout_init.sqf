@@ -25,6 +25,7 @@
 			{
 
 				_x removeMagazines "1Rnd_HE_Grenade_shell";
+				_x removeMagazines "MiniGrenade";
 
 			};
 

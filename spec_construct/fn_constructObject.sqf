@@ -51,7 +51,7 @@ if(!isNull _unit && !("" in [_objectTypeToBuild,_buildingAvailableBoolString])) 
         // create object
         private "_object";
 		if (_objectTypeToBuild == "Medic-Zelt") then {
-			_object = "Land_MedicalTent_01_MTP_closed_F" createVehicle position _unit;
+			_object = "Land_MedicalTent_01_wdl_closed_F" createVehicle position _unit;
 			_object animateSource ['Door_Hide',1,true];
 			_object setVariable ["ace_medical_isMedicalFacility", true, true];
 			_object allowDamage false;

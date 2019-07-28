@@ -1,62 +1,26 @@
-
+	setDate [2021, 8, 10, 4, 30];
+	
 	///////////////////////////////////////////////////
 	//Nimmt Russen die total bescheuerten Brillen weg//
 	///////////////////////////////////////////////////
 	
-	{if ((side _x) == east) then {removeGoggles _x};}foreach allUnits;
-
-	//KI SKill
-	private _scriptHandle_0 = [] spawn 
-	{
-		
-		{
-
-			if (local leader _x) then 
-			{
-				
-				{
-					
-					//Set skills
-					_x setSkill ["aimingAccuracy",0.4];
-					_x setSkill ["aimingShake",0.4];
-					_x setSkill ["aimingSpeed",0.75];
-					_x setSkill ["commanding",0.75];
-					_x setSkill ["courage",0.75];
-					_x setSkill ["general",0.75];
-					_x setSkill ["reloadSpeed",0.75];
-					_x setSkill ["spotDistance",1];
-					_x setSkill ["spotTime",1];
-					
-				}
-				foreach units _x;
-			
-			};
-
-		}
-		foreach allGroups;
-
-	};
+	{if ((side _x) != west) then {removeGoggles _x};}foreach allUnits;
 
 	// /////////////////////////////////////////
 	// //Fzg Loadout ca. 1/4 Truppstartloadout//
 	// /////////////////////////////////////////
-
+	
 	//Zgf
 	{
 
 		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 6];
 		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 3];
-		_x addItemCargoGlobal ["SmokeShell", 6];
-		_x addItemCargoGlobal ["SmokeShellPurple", 3];
-		_x addItemCargoGlobal ["SmokeShellRed", 3];
-		_x addItemCargoGlobal ["SmokeShellGreen", 3];
 		_x addItemCargoGlobal ["ACE_fieldDressing",9];
 		_x addItemCargoGlobal ["ACE_packingBandage",9];
 		_x addItemCargoGlobal ["ACE_tourniquet",3];
 		_x addItemCargoGlobal ["ACE_morphine",3];
 		_x addItemCargoGlobal ["Chemlight_green",3];
 		_x addItemCargoGlobal ["B_IR_Grenade",3];
-		_x addItemCargoGlobal ["ACE_HuntIR_M203",4];
 		_x addBackpackCargoGlobal ["ACE_TacticalLadder_Pack",1];
 
 	} 
@@ -69,10 +33,6 @@
 		_x addItemCargoGlobal ["BWA3_200Rnd_556x45", 4];
 		_x addItemCargoGlobal ["hlc_20rnd_762x51_b_G3", 2];
 		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 4];
-		_x addItemCargoGlobal ["SmokeShell", 6];
-		_x addItemCargoGlobal ["SmokeShellPurple", 3];
-		_x addItemCargoGlobal ["SmokeShellRed", 3];
-		_x addItemCargoGlobal ["SmokeShellGreen", 3];
 		_x addItemCargoGlobal ["ACE_fieldDressing",9];
 		_x addItemCargoGlobal ["ACE_packingBandage",9];
 		_x addItemCargoGlobal ["ACE_tourniquet",3];
@@ -82,6 +42,23 @@
 
 	} 
 	forEach [inf_veh_1,inf_veh_2,inf_veh_3];
+	
+	//MG
+	{
+
+		_x addItemCargoGlobal ["hlc_250Rnd_762x51_M_MG3", 4];
+		_x addItemCargoGlobal ["hlc_100Rnd_762x51_M_MG3", 6];
+		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 2];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 8];
+		_x addItemCargoGlobal ["ACE_fieldDressing",9];
+		_x addItemCargoGlobal ["ACE_packingBandage",9];
+		_x addItemCargoGlobal ["ACE_tourniquet",3];
+		_x addItemCargoGlobal ["ACE_morphine",3];
+		_x addItemCargoGlobal ["Chemlight_green",3];
+		_x addItemCargoGlobal ["B_IR_Grenade",3];
+
+	} 
+	forEach [inf_veh_4];
 
 	//San
 	{
@@ -99,12 +76,11 @@
 		_x addItemCargoGlobal ["Chemlight_green",2];
 		_x addItemCargoGlobal ["B_IR_Grenade",1];
 		_x addItemCargoGlobal ["ACE_surgicalKit",4];
-		_x addItemCargoGlobal ["ACE_personalAidKit",2];
 		_x addItemCargoGlobal ["ACE_salineIV_250",4];
 		_x addItemCargoGlobal ["ACE_salineIV_500",4];
 		_x addItemCargoGlobal ["ACE_salineIV",4];
 		_x addItemCargoGlobal ["ACE_bodyBag",10];
-		_x addBackpackCargoGlobal ["ACE_TacticalLadder_Pack",1];
+		_x addItemCargoGlobal ["adv_aceCPR_AED",4];
 	} 
 	forEach [san_veh_1];
 
@@ -113,43 +89,31 @@
 
 		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP",4];
 		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8",2];
-		_x addItemCargoGlobal ["SmokeShell",2];
-		_x addItemCargoGlobal ["SmokeShellPurple",2];
-		_x addItemCargoGlobal ["SmokeShellRed",2];
-		_x addItemCargoGlobal ["SmokeShellGreen",2];
 		_x addItemCargoGlobal ["ACE_fieldDressing",3];
 		_x addItemCargoGlobal ["ACE_packingBandage",3];
 		_x addItemCargoGlobal ["ACE_tourniquet",1];
 		_x addItemCargoGlobal ["ACE_morphine",1];
 		_x addItemCargoGlobal ["ACE_CableTie",1];
-		_x addItemCargoGlobal ["1Rnd_SmokeRed_Grenade_shell",5];
-		_x addItemCargoGlobal ["1Rnd_SmokeGreen_Grenade_shell",5];
-		_x addItemCargoGlobal ["1Rnd_SmokePurple_Grenade_shell",5];
 		_x addItemCargoGlobal ["ACE_UAVBattery",1];
 		_x addItemCargoGlobal ["Chemlight_green",2];
 		_x addItemCargoGlobal ["B_IR_Grenade",2];
-		_x addBackpackCargoGlobal ["ACE_TacticalLadder_Pack",1];
-
 	} 
 	forEach [rec_veh_1];
 	
 	//Ammotrucks
 	{
-		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
-		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
-		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
-		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
-		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
-		[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;
+		for "_i" from 1 to 6 do {[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;};
 		
-		[_x, "rhs_mag_M151_19"] call ace_rearm_fnc_addMagazineToSupply;
-		[_x, "rhs_mag_AGM114K_4"] call ace_rearm_fnc_addMagazineToSupply;
-		[_x, "rhs_mag_AGM114N_4"] call ace_rearm_fnc_addMagazineToSupply;
-		[_x, "30Rnd_CMFlare_Chaff_Magazine"] call ace_rearm_fnc_addMagazineToSupply;
-		[_x, "rhs_mag_30x113mm_M789_HEDP_1200"] call ace_rearm_fnc_addMagazineToSupply;
-		[_x, "rhs_mag_30x113mm_M789_HEDP_1200", 15000] call ace_rearm_fnc_removeMagazineFromSupply;
+		for "_i" from 1 to 6 do {[_x, "rhs_mag_M151_19"] call ace_rearm_fnc_addMagazineToSupply;};
+		for "_i" from 1 to 4 do {[_x, "rhs_mag_AGM114K_4"] call ace_rearm_fnc_addMagazineToSupply;};
+		for "_i" from 1 to 4 do {[_x, "rhs_mag_AGM114N_4"] call ace_rearm_fnc_addMagazineToSupply;};
+		for "_i" from 1 to 4 do {[_x, "rhs_mag_Sidewinder_heli"] call ace_rearm_fnc_addMagazineToSupply;};
+		for "_i" from 1 to 3 do {[_x, "30Rnd_CMFlare_Chaff_Magazine"] call ace_rearm_fnc_addMagazineToSupply;};
+		for "_i" from 1 to 24 do {[_x, "rhs_mag_30x113mm_M789_HEDP_1200", true] call ace_rearm_fnc_addMagazineToSupply;};
+		
+		_x setVariable ["ACE_isRepairVehicle", true, true];
 	}
-	forEach [ammoTruck1];
+	forEach [ammo_truck_1, ammo_truck_2];
 
 	////////////////////////////////////////
 	//Munikisten ca. 1 Gruppenstartloadout//
@@ -174,15 +138,6 @@
 	}
 	forEach [mg_muni_1,mg_muni_2,mg_muni_3,mg_muni_4];
 
-	// //Pio
-	// {
-	
-		// _x addItemCargoGlobal ["DemoCharge_Remote_Mag",16];
-		// _x addItemCargoGlobal ["CUP_PipeBomb_M",4];
-
-	// }
-	// forEach [pio_muni_1,pio_muni_2,pio_muni_3,pio_muni_4];
-
 	//Inf
 	{
 	
@@ -200,7 +155,6 @@
 		_x addItemCargoGlobal ["Chemlight_green",8];
 		_x addItemCargoGlobal ["B_IR_Grenade",2];
 		_x addItemCargoGlobal ["ACE_CableTie",8];
-		_x addItemCargoGlobal ["ACE_HuntIR_M203",4];
 
 	}
 	forEach 
@@ -282,18 +236,17 @@
 	//SaniKisten
 	{
 
-		_x addItemCargoGlobal ["ACE_fieldDressing", 30*3];
-		_x addItemCargoGlobal ["ACE_elasticBandage", 30*3];
-		_x addItemCargoGlobal ["ACE_packingBandage", 30*3];
-		_x addItemCargoGlobal ["ACE_quikclot", 30*3];
-		_x addItemCargoGlobal ["ACE_tourniquet", 10*3];
-		_x addItemCargoGlobal ["ACE_morphine", 10*3];
-		_x addItemCargoGlobal ["ACE_epinephrine", 10*3];
-		_x addItemCargoGlobal ["ACE_surgicalKit", 4*3];
-		_x addItemCargoGlobal ["ACE_personalAidKit", 4*3];
-		_x addItemCargoGlobal ["ACE_salineIV_250", 4*3];
-		_x addItemCargoGlobal ["ACE_salineIV_500", 4*3];
-		_x addItemCargoGlobal ["ACE_salineIV", 4*3];
+		_x addItemCargoGlobal ["ACE_fieldDressing", 90];
+		_x addItemCargoGlobal ["ACE_elasticBandage", 90];
+		_x addItemCargoGlobal ["ACE_packingBandage", 90];
+		_x addItemCargoGlobal ["ACE_quikclot", 90];
+		_x addItemCargoGlobal ["ACE_tourniquet", 30];
+		_x addItemCargoGlobal ["ACE_morphine", 30];
+		_x addItemCargoGlobal ["ACE_epinephrine", 30];
+		_x addItemCargoGlobal ["ACE_surgicalKit", 12];
+		_x addItemCargoGlobal ["ACE_salineIV_250", 12];
+		_x addItemCargoGlobal ["ACE_salineIV_500", 12];
+		_x addItemCargoGlobal ["ACE_salineIV", 12];
 		_x addItemCargoGlobal ["ACE_bodyBag",10];
 		
 	}

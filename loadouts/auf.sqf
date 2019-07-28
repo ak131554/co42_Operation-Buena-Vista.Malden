@@ -320,6 +320,7 @@
 
 			_insignie = selectRandom _grpFhrArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "SERGEANT";
 
 			_backpack = "";
 			if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz"))then {_backpack = "TFAR_rt1523g_big_bwmod";};
@@ -347,6 +348,7 @@
 			
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 		case "auf_d_k":
@@ -363,6 +365,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 		case "auf_e":
@@ -392,6 +395,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 		case "auf_k":
@@ -405,6 +409,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 		

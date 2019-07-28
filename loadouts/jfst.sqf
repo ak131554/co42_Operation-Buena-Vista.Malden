@@ -172,6 +172,7 @@
 	_unit linkItem "TFAR_anprc152";
 
 	[_unit,"Redd_JFST"] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+	_unit setUnitRank "SERGEANT";
 
 	//Add another magazine
 	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};

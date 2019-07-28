@@ -565,9 +565,7 @@
 
 		"Redd_Gef",
 		"Redd_OGef",
-		"Redd_HptGef",
-		"Redd_StGefr",
-		"Redd_OStGefr"
+		"Redd_HptGef"
 		
 	];
 
@@ -592,6 +590,7 @@
 
 			_insignie = selectRandom _grpFhrArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "SERGEANT";
 
 			_unit linkItem "TFAR_anprc152";
 			
@@ -612,7 +611,8 @@
 
 			_insignie = selectRandom _stellvGrpFhrArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
-
+			_unit setUnitRank "CORPORAL";
+			
 			_unit linkItem "TFAR_anprc152";
 			
 		};
@@ -630,6 +630,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 
@@ -645,6 +646,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 
@@ -658,6 +660,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 
@@ -673,6 +676,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 			removeBackpack _unit;
 
@@ -689,6 +693,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 
@@ -703,6 +708,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 
@@ -720,6 +726,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 
@@ -739,6 +746,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 			_unit linkItem "TFAR_anprc152";
 			

@@ -213,6 +213,8 @@
 	_unit linkItem "TFAR_anprc152";
 
 	_unit setVariable ["ACE_IsEngineer",true,true];
+	
+	_unit setUnitRank "LIEUTENANT";
 
 	if (_loadout isEqualTo "pilot_s") then 
 	{

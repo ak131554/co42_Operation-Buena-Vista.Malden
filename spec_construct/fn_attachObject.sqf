@@ -30,7 +30,7 @@ if(!isNull _unit && !("" in [_objectTypeToBuild,_buildingAvailableBoolString])) 
     // create local object
 	private "_attachedObject";
     if (_objectTypeToBuild == "Medic-Zelt") then {
-		_attachedObject = "Land_MedicalTent_01_MTP_closed_F" createVehicleLocal (getPosASL _unit);
+		_attachedObject = "Land_MedicalTent_01_wdl_closed_F" createVehicleLocal (getPosASL _unit);
 		_attachedObject animateSource ['Door_Hide',1,true];
 	} else {
 		_attachedObject = _objectTypeToBuild createVehicleLocal (getPosASL _unit);

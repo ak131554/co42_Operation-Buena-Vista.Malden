@@ -243,7 +243,7 @@
 			for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_morphine";};
 			for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_epinephrine";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_surgicalKit";};
-			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_personalAidKit";};
+			_unit addItemToBackpack "adv_aceCPR_AED";
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV_250";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV_500";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
@@ -268,7 +268,7 @@
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_morphine";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_epinephrine";};
 			for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_surgicalKit";};
-			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_personalAidKit";};
+			_unit addItemToBackpack "adv_aceCPR_AED";
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_salineIV_250";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_salineIV_500";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
@@ -367,12 +367,14 @@
 			_unit setVariable ["ACE_IsEngineer",true,true];
 
 			_unit linkItem "TFAR_anprc152";
+			_unit setUnitRank "CORPORAL";
 
 		};
 		case "san_k_p":
 		{
 
 			_unit setVariable ["ACE_IsEngineer",true,true];
+			_unit setUnitRank "CORPORAL";
 			
 		};
 
@@ -384,6 +386,7 @@
 			_unit addWeapon "Rangefinder";
 
 			_unit linkItem "TFAR_anprc152";
+			_unit setUnitRank "SERGEANT";
 			
 		};
 
@@ -395,6 +398,7 @@
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "BWA3_DM32_Green";};
 
 			_unit linkItem "TFAR_anprc152";
+			_unit setUnitRank "CORPORAL";
 
 		};
 
@@ -402,6 +406,7 @@
 		{
 
 			_unit linkItem "TFAR_anprc152";
+			_unit setUnitRank "CORPORAL";
 
 		};
 

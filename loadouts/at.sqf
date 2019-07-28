@@ -201,3 +201,4 @@
 
 	_insignie = selectRandom _mannschafterArray;
 	[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+	_unit setUnitRank "PRIVATE";

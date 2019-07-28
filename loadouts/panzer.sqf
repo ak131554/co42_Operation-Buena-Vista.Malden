@@ -388,6 +388,7 @@
 
 			_insignie = selectRandom _KomArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "SERGEANT";
 
 			if (_isGreni) then
 			{
@@ -415,6 +416,7 @@
 
 			_insignie = selectRandom _KomArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "SERGEANT";
 
 			if (_isGreni) then
 			{
@@ -441,6 +443,7 @@
 
 			_insignie = selectRandom _KomArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "SERGEANT";
 
 
 		};
@@ -457,6 +460,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 
@@ -471,6 +475,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 			
 		};
 
@@ -484,6 +489,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 			
 		};
 

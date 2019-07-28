@@ -23,7 +23,4 @@ forEach
 
 ];
 
-//Aufruf medical Tent
-//[] call compile preprocessFileLineNumbers "jk_medicTent.sqf";
-
 if (didJIP) then {player setPosASL (getPosASL respawn);};

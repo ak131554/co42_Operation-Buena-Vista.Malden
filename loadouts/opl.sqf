@@ -197,6 +197,7 @@
 			];
 			_insignie = selectRandom _kmpChefArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "MAJOR";
 
 		};
 		case "opl_2":
@@ -212,6 +213,7 @@
 			];
 			_insignie = selectRandom _feldwebelArray_1;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "LIEUTENANT";
 
 		};
 		case "opl_3": 
@@ -226,6 +228,7 @@
 			];
 			_insignie = selectRandom _feldwebelArray_2;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "SERGEANT";
 			
 		};
 		

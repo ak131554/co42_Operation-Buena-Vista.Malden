@@ -373,6 +373,7 @@
 
 			_insignie = selectRandom _grpFhrArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "SERGEANT";
 
 			_unit linkItem "TFAR_anprc152";
 		
@@ -388,6 +389,7 @@
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 		};
 
@@ -402,6 +404,7 @@
 			_unit setVariable ["ACE_IsEngineer",true,true];
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
 
 			_unit linkItem "TFAR_anprc152";
 

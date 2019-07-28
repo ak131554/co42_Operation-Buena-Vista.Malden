@@ -2,6 +2,7 @@
 	
 	force ace_medical_useLocation_SurgicalKit = 3
 	force ace_medical_useLocation_PAK = 2
+	force adv_aceCPR_useLocation_AED = 2;
 	
 	force ace_pylons_requireEngineer = true
 	

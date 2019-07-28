@@ -113,8 +113,6 @@
 		case "zgf_z2":
 		{
 
-			_unit addItemToBackpack "ACE_HuntIR_monitor";
-			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "1Rnd_SmokeGreen_Grenade_shell";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "1Rnd_SmokePurple_Grenade_shell";};
@@ -265,6 +263,7 @@
 
 			_insignie = selectRandom _zgFhrArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "CAPTAIN";
 			
 		};
 
@@ -273,6 +272,7 @@
 
 			_insignie = selectRandom _feldwebelArray_1;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "SERGEANT";
 
 		};
 
@@ -283,6 +283,7 @@
 
 			_insignie = selectRandom _feldwebelArray_2;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "CORPORAL";
 
 		};
 		

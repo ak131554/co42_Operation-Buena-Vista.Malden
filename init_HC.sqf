@@ -38,7 +38,7 @@ _trg setTriggerStatements ["this", "", ""];
 _trg setTriggerTimeout [0, 8, 12, false];
 _trg_synced_waypoints = [];
 
-_obj1_outer_1 = [getMarkerPos "patrol_obj1_3", resistance, ["I_Soldier_TL_F","I_Soldier_F","I_Soldier_AR_F","I_Soldier_LAT_F"]] call BIS_fnc_spawnGroup;
+_obj1_outer_1 = [getMarkerPos "patrol_obj1_3", resistance, ["I_Soldier_TL_F","I_Soldier_F","I_Soldier_AR_F","I_Soldier_LAT_F","I_Soldier_AA_F","I_Soldier_AAA_F"]] call BIS_fnc_spawnGroup;
 [_obj1_outer_1, objNull] spawn epsilon_setSkillAndHe;
 [_obj1_outer_1 , getmarkerpos "patrol_obj1_3", 200, 6, "MOVE", "SAFE", "YELLOW", "NORMAL", "WEDGE","",[0,3,20]] call CBA_fnc_taskPatrol;
 _waypoints = waypoints _obj1_outer_1;

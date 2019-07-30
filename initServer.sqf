@@ -41,6 +41,8 @@
 		_x addItemCargoGlobal ["Chemlight_green",3];
 		_x addItemCargoGlobal ["B_IR_Grenade",3];
 		_x addItemCargoGlobal ["1Rnd_HE_Grenade_shell",3];
+		_x addItemCargoGlobal ["BWA3_Fliegerfaust",2];
+		_x addItemCargoGlobal ["BWA3_Fliegerfaust_Mag",4];
 
 	} 
 	forEach [inf_veh_1,inf_veh_2,inf_veh_3];
@@ -60,6 +62,8 @@
 		_x addItemCargoGlobal ["ACE_morphine",3];
 		_x addItemCargoGlobal ["Chemlight_green",3];
 		_x addItemCargoGlobal ["B_IR_Grenade",3];
+		_x addItemCargoGlobal ["BWA3_Fliegerfaust",2];
+		_x addItemCargoGlobal ["BWA3_Fliegerfaust_Mag",4];
 
 	} 
 	forEach [inf_veh_4];

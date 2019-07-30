@@ -9,6 +9,7 @@
 		#include "Redd_Loadout\CfgFunctions.hpp"
 		#include "spec_crateNaming\CfgFunctions.hpp"
 		#include "spec_construct\CfgFunctions.hpp"
+		#include "Fett_Redd_Fuel\CfgFunctions.hpp"
 	};
 	
 	class Header
@@ -32,5 +33,7 @@
 	OnLoadMissionTime = true;
 	author="[TTT] Epsilon";
 	OnLoadName = "OP Buena Vista";
+	loadScreen = "images\onLoad.paa";
+	
 	disabledAI = 1;
 	cba_settings_hasSettingsFile = 1;

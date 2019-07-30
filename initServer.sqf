@@ -14,6 +14,7 @@
 	{
 
 		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 6];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_Tracer", 2];
 		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 3];
 		_x addItemCargoGlobal ["ACE_fieldDressing",9];
 		_x addItemCargoGlobal ["ACE_packingBandage",9];
@@ -29,9 +30,9 @@
 	//Inf
 	{
 
-		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 12];
-		_x addItemCargoGlobal ["BWA3_200Rnd_556x45", 4];
-		_x addItemCargoGlobal ["hlc_20rnd_762x51_b_G3", 2];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 9];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_Tracer", 2];
+		_x addItemCargoGlobal ["BWA3_200Rnd_556x45", 2];
 		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 4];
 		_x addItemCargoGlobal ["ACE_fieldDressing",9];
 		_x addItemCargoGlobal ["ACE_packingBandage",9];
@@ -39,6 +40,7 @@
 		_x addItemCargoGlobal ["ACE_morphine",3];
 		_x addItemCargoGlobal ["Chemlight_green",3];
 		_x addItemCargoGlobal ["B_IR_Grenade",3];
+		_x addItemCargoGlobal ["1Rnd_HE_Grenade_shell",3];
 
 	} 
 	forEach [inf_veh_1,inf_veh_2,inf_veh_3];
@@ -46,10 +48,12 @@
 	//MG
 	{
 
-		_x addItemCargoGlobal ["hlc_250Rnd_762x51_M_MG3", 4];
-		_x addItemCargoGlobal ["hlc_100Rnd_762x51_M_MG3", 6];
+		_x addItemCargoGlobal ["hlc_100Rnd_762x51_M_MG3", 2];
+		_x addItemCargoGlobal ["hlc_50Rnd_762x51_M_MG3", 2];
 		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 2];
-		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 8];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 4];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_Tracer", 2];
+		_x addItemCargoGlobal ["hlc_20rnd_762x51_b_G3", 1];
 		_x addItemCargoGlobal ["ACE_fieldDressing",9];
 		_x addItemCargoGlobal ["ACE_packingBandage",9];
 		_x addItemCargoGlobal ["ACE_tourniquet",3];
@@ -63,7 +67,7 @@
 	//San
 	{
 
-		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP",12];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP",6];
 		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8",4];
 		_x addItemCargoGlobal ["ACE_fieldDressing",20];
 		_x addItemCargoGlobal ["ACE_elasticBandage",20];
@@ -84,22 +88,6 @@
 	} 
 	forEach [san_veh_1];
 
-	//Spähtrupp
-	{
-
-		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP",4];
-		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8",2];
-		_x addItemCargoGlobal ["ACE_fieldDressing",3];
-		_x addItemCargoGlobal ["ACE_packingBandage",3];
-		_x addItemCargoGlobal ["ACE_tourniquet",1];
-		_x addItemCargoGlobal ["ACE_morphine",1];
-		_x addItemCargoGlobal ["ACE_CableTie",1];
-		_x addItemCargoGlobal ["ACE_UAVBattery",1];
-		_x addItemCargoGlobal ["Chemlight_green",2];
-		_x addItemCargoGlobal ["B_IR_Grenade",2];
-	} 
-	forEach [rec_veh_1];
-	
 	//Ammotrucks
 	{
 		for "_i" from 1 to 6 do {[_x, "Redd_Tank_Fuchs_1A4_Jg_Flecktarn"] call ace_rearm_fnc_addVehicleMagazinesToSupply;};
@@ -114,6 +102,30 @@
 		_x setVariable ["ACE_isRepairVehicle", true, true];
 	}
 	forEach [ammo_truck_1, ammo_truck_2];
+	
+	//////////////////
+	//Spritverbrauch//
+	//////////////////
+
+	[[
+
+		zf_veh_1,
+		san_veh_1,
+		inf_veh_1,
+		inf_veh_2,
+		inf_veh_3,
+		inf_veh_4,
+		ammo_truck_1,
+		ammo_truck_2
+
+	],7.5] call Fett_Redd_fnc_FuelConsumption;
+
+	[[
+		
+		heli_veh_1,
+		heli_veh_2,
+		heli_veh_3
+	],5] call Fett_Redd_fnc_FuelConsumption;
 
 	////////////////////////////////////////
 	//Munikisten ca. 1 Gruppenstartloadout//
@@ -123,7 +135,7 @@
 	{
 	
 		_x addItemCargoGlobal ["BWA3_PzF3_Tandem_Loaded", 2];
-		
+		_x setVariable ["ace_cargo_displayName", "Panzerfaust 3", true];
 	}
 	forEach [at_muni_1,at_muni_2,at_muni_3,at_muni_4,at_muni_5,at_muni_6,at_muni_7,at_muni_8];
 
@@ -134,6 +146,7 @@
 		_x addItemCargoGlobal ["hlc_100Rnd_762x51_M_MG3", 4];
 		_x addItemCargoGlobal ["hlc_50Rnd_762x51_M_MG3", 4];
 		_x addItemCargoGlobal ["ACE_SpareBarrel", 2];
+		_x setVariable ["ace_cargo_displayName", "MG Munition", true];
 		
 	}
 	forEach [mg_muni_1,mg_muni_2,mg_muni_3,mg_muni_4];
@@ -153,8 +166,8 @@
 		_x addItemCargoGlobal ["BWA3_DM32_Green", 5];
 		_x addItemCargoGlobal ["rhs_mag_mk84",8];
 		_x addItemCargoGlobal ["Chemlight_green",8];
-		_x addItemCargoGlobal ["B_IR_Grenade",2];
 		_x addItemCargoGlobal ["ACE_CableTie",8];
+		_x setVariable ["ace_cargo_displayName", "Standard Munition", true];
 
 	}
 	forEach 
@@ -182,6 +195,7 @@
 		_x addItemCargoGlobal ["1Rnd_SmokeRed_Grenade_shell",10];
 		_x addItemCargoGlobal ["1Rnd_SmokeGreen_Grenade_shell",10];
 		_x addItemCargoGlobal ["1Rnd_SmokePurple_Grenade_shell",10];
+		_x setVariable ["ace_cargo_displayName", "Granaten", true];
 
 	}
 	forEach 
@@ -209,9 +223,9 @@
 		_x addItemCargoGlobal ["ACE_HelmetCam", 5];
 		_x addItemCargoGlobal ["Laserbatteries", 2];
 		_x addItemCargoGlobal ["Laserdesignator_03", 2];
-		_x addItemCargoGlobal ["ACE_RangeTable_82mm", 4];
 		_x addItemCargoGlobal ["ACE_RangeCard", 3];
 		_x addItemCargoGlobal ["ACE_microDAGR", 2];
+		_x setVariable ["ace_cargo_displayName", "Ausrüstung", true];
 		
 	}
 	forEach [equi_1];
@@ -220,18 +234,10 @@
 		_x addBackpackCargoGlobal ["BWA3_Carryall_Fleck", 3];
 		_x addBackpackCargoGlobal ["TFAR_rt1523g_big_bwmod", 3];
 		_x addBackpackCargoGlobal ["BWA3_AssaultPack_Fleck", 3];
+		_x setVariable ["ace_cargo_displayName", "Rucksäcke", true];
 		
 	}
 	forEach [equi_2];
-	{
-		
-		_x addBackpackCargoGlobal ["BWA3_PatrolPack_Fleck", 2];
-		_x addItemCargoGlobal ["ITC_Land_B_AR2i_Packed", 2];
-		_x addItemCargoGlobal ["ACE_UAVBattery", 5];
-		_x addItemCargoGlobal ["B_UavTerminal", 5];
-		
-	}
-	forEach [equi_3];
 
 	//SaniKisten
 	{
@@ -248,6 +254,7 @@
 		_x addItemCargoGlobal ["ACE_salineIV_500", 12];
 		_x addItemCargoGlobal ["ACE_salineIV", 12];
 		_x addItemCargoGlobal ["ACE_bodyBag",10];
+		_x setVariable ["ace_cargo_displayName", "Sanitätsmaterial", true];
 		
 	}
 	forEach [sanKiste_1,sanKiste_2,sanKiste_3,sanKiste_4,sanKiste_5,sanKiste_6];
@@ -261,8 +268,7 @@
 		_x addItemCargoGlobal ["SmokeShellRed", 4];
 		_x addItemCargoGlobal ["SmokeShellGreen", 4];
 		_x addItemCargoGlobal ["Chemlight_green",4];
-		_x addItemCargoGlobal ["B_IR_Grenade",2];
-		_x addItemCargoGlobal ["ACE_CableTie",4];
+		_x setVariable ["ace_cargo_displayName", "US Munition", true];
 
 	}
 	forEach [us_muni_1];
@@ -278,7 +284,7 @@
 		[at_muni_box,[at_muni_1,at_muni_2,at_muni_3,at_muni_4,at_muni_5,at_muni_6,at_muni_7,at_muni_8]] spawn compile preprocessFileLineNumbers "scripts\loadIn.sqf";
 		
 		[supply_box,100] call ace_cargo_fnc_setSpace; 
-		[supply_box,[gr_muni_1,gr_muni_2,gr_muni_3,gr_muni_4,equi_1,equi_2,equi_3]] spawn compile preprocessFileLineNumbers "scripts\loadIn.sqf";
+		[supply_box,[gr_muni_1,gr_muni_2,gr_muni_3,gr_muni_4,equi_1,equi_2]] spawn compile preprocessFileLineNumbers "scripts\loadIn.sqf";
 		
 		[sani_box,100] call ace_cargo_fnc_setSpace; 
 		[sani_box,[sanKiste_1,sanKiste_2,sanKiste_3,sanKiste_4,sanKiste_5,sanKiste_6]] spawn compile preprocessFileLineNumbers "scripts\loadIn.sqf";

@@ -238,7 +238,6 @@
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
-	//for "_i" from 1 to 1 do {_unit addItemToVest "ACE_EntrenchingTool";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_green";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
@@ -369,6 +368,7 @@
 			for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 
 			for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
+			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_EntrenchingTool";};
 			if ((_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter_idz")) then 
 			{
 

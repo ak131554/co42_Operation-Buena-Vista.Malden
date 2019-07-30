@@ -391,7 +391,6 @@
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
-	//for "_i" from 1 to 1 do {_unit addItemToVest "ACE_EntrenchingTool";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_green";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
@@ -634,7 +633,21 @@
 
 		};
 
-		case "inf_gr";
+		case "inf_gr":
+		{
+
+
+			for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
+
+			for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
+			for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
+	
+			_insignie = selectRandom _mannschafterArray;
+			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
+			_unit setUnitRank "PRIVATE";
+
+		};
+		
 		case "inf_s":
 		{
 
@@ -643,7 +656,8 @@
 
 			for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
 			for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
-
+			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_EntrenchingTool";};
+	
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
 			_unit setUnitRank "PRIVATE";

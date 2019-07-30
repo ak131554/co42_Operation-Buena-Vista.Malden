@@ -243,7 +243,6 @@
 			for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_morphine";};
 			for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_epinephrine";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_surgicalKit";};
-			_unit addItemToBackpack "adv_aceCPR_AED";
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV_250";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV_500";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
@@ -268,7 +267,6 @@
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_morphine";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_epinephrine";};
 			for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_surgicalKit";};
-			_unit addItemToBackpack "adv_aceCPR_AED";
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_salineIV_250";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_salineIV_500";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_salineIV";};
@@ -276,6 +274,15 @@
 			
 		};
 
+	};
+	
+	switch toLower (_loadout) do
+	{
+		case "san_tf";
+		case "san_s":
+		{
+			for "_i" from 1 to 1 do {_unit addItemToBackpack "adv_aceCPR_AED";};
+		};
 	};
 
 	//Add weapons
@@ -351,7 +358,24 @@
 	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
 	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 
-	_unit setVariable ["ace_medical_medicClass",2,true];
+	switch toLower(_loadout) do
+	{
+	
+		case "san_h";
+		case "san_k_p";
+		case "san_c_p";
+		case "san_kr";
+		case "san_k":
+		{
+			_unit setVariable ["ace_medical_medicClass",1,true];
+		};
+		
+		case "san_tf";
+		case "san_s":
+		{
+			_unit setVariable ["ace_medical_medicClass",2,true];
+		};
+	};
 
 	[_unit,"MedB"] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
 	

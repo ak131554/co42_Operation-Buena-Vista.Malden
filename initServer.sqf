@@ -13,7 +13,7 @@
 	//Zgf
 	{
 
-		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 6];
+		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_AP", 8];
 		_x addItemCargoGlobal ["BWA3_30Rnd_556x45_G36_Tracer", 2];
 		_x addItemCargoGlobal ["BWA3_15Rnd_9x19_P8", 3];
 		_x addItemCargoGlobal ["ACE_fieldDressing",9];

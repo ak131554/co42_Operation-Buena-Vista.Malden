@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=574;
+		nextID=580;
 	};
 	class Camera
 	{
-		pos[]={4697.3657,1089.1145,5020.2476};
-		dir[]={-0.1031466,-0.43508354,0.89447123};
-		up[]={-0.04984257,0.90038675,0.43222362};
-		aside[]={0.9934243,1.71789e-007,0.1145588};
+		pos[]={3552.531,13.142474,3287.1331};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -742,7 +742,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=4;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -1302,136 +1302,6 @@ class Mission
 							};
 						};
 						nAttributes=7;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3552.4121,2.7681923,3301.1702};
-						angles[]={0,3.6320651,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						init="call{this setVariable [""loadout"",""zgf_z3"",false];}";
-						description="#4 - Nachschubfeldwebel@Gelb - Zugtrupp";
-						isPlayable=1;
-					};
-					id=7620;
-					type="B_Soldier_SL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_featureType";
-							expression="if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="0";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male06ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_ambientAnimParams";
-							expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if ((_value # 0 != '') && !isMultiplayer) then		{			[_unit,_value # 0,_value # 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"ARRAY"
-										};
-									};
-									class value
-									{
-										items=2;
-										class Item0
-										{
-											class data
-											{
-												class type
-												{
-													type[]=
-													{
-														"STRING"
-													};
-												};
-												value="";
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												class type
-												{
-													type[]=
-													{
-														"STRING"
-													};
-												};
-												value="ASIS";
-											};
-										};
-									};
-								};
-							};
-						};
-						nAttributes=4;
 					};
 				};
 			};
@@ -50462,6 +50332,7 @@ class Mission
 			};
 			id=7628;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.038619995;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50582,6 +50453,7 @@ class Mission
 			};
 			id=7631;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.059112549;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50862,6 +50734,7 @@ class Mission
 			};
 			id=7638;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.0009765625;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50902,6 +50775,7 @@ class Mission
 			};
 			id=7639;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.026489258;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50942,7 +50816,7 @@ class Mission
 			};
 			id=7640;
 			type="Sign_DangerMines_ACR";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.015731812;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50983,6 +50857,7 @@ class Mission
 			};
 			id=7641;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.010803223;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51023,6 +50898,7 @@ class Mission
 			};
 			id=7642;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.031616211;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51063,6 +50939,7 @@ class Mission
 			};
 			id=7643;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.12350464;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51103,6 +50980,7 @@ class Mission
 			};
 			id=7644;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.017875671;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51143,6 +51021,7 @@ class Mission
 			};
 			id=7645;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.061576843;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51183,6 +51062,7 @@ class Mission
 			};
 			id=7646;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.068771362;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51223,6 +51103,7 @@ class Mission
 			};
 			id=7647;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.11743164;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51263,7 +51144,7 @@ class Mission
 			};
 			id=7650;
 			type="Sign_DangerMines_ACR";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.06388855;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51304,7 +51185,7 @@ class Mission
 			};
 			id=7651;
 			type="Sign_DangerMines_ACR";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.063949585;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51345,7 +51226,7 @@ class Mission
 			};
 			id=7652;
 			type="Sign_DangerMines_ACR";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.073928833;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51386,7 +51267,7 @@ class Mission
 			};
 			id=7653;
 			type="Sign_DangerMines_ACR";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.020965576;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51427,7 +51308,7 @@ class Mission
 			};
 			id=7654;
 			type="Sign_DangerMines_ACR";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.06552124;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51468,6 +51349,7 @@ class Mission
 			};
 			id=7655;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.084320068;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51508,6 +51390,7 @@ class Mission
 			};
 			id=7656;
 			type="Sign_DangerMines_ACR";
+			atlOffset=-0.046386719;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51548,7 +51431,7 @@ class Mission
 			};
 			id=7657;
 			type="Sign_DangerMines_ACR";
-			atlOffset=3.0517578e-005;
+			atlOffset=-0.015777588;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51589,7 +51472,7 @@ class Mission
 			};
 			id=7658;
 			type="Sign_DangerMines_ACR";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.0010223389;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51630,7 +51513,7 @@ class Mission
 			};
 			id=7659;
 			type="Sign_DangerMines_ACR";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.028488159;
 			class CustomAttributes
 			{
 				class Attribute0

@@ -47,7 +47,7 @@
 	for "_i" from 1 to 6 do {_unit addItemToVest "ACE_packingBandage";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_tourniquet";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_morphine";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
+	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_XL50";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
 	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
 		for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_MP7";};
@@ -208,8 +208,13 @@
 	//Add items
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
-	_unit linkItem "ACE_Altimeter";
-	_unit linkItem "ACE_DK10_b";
+	if (_isFalli) then {
+		_unit linkItem "ACE_Altimeter";
+	}
+	else {
+		_unit linkItem "ItemWatch";
+	};
+	_unit linkItem "ItemAndroid";
 	_unit linkItem "TFAR_anprc152";
 
 	_unit setVariable ["ACE_IsEngineer",true,true];

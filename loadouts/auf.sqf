@@ -174,7 +174,7 @@
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_tourniquet";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_morphine";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
+	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_XL50";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_MapTools";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_green";};
@@ -278,8 +278,13 @@
 	//Add items
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
-	_unit linkItem "ACE_Altimeter";
-	//_unit linkItem "TFAR_anprc152";
+	if (_isFalli) then {
+		_unit linkItem "ACE_Altimeter";
+	}
+	else {
+		_unit linkItem "ItemWatch";
+	};
+	_unit linkItem "TFAR_anprc152";
 	
 	//Add another magazines
 	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
@@ -333,15 +338,14 @@
 			for "_i" from 1 to 10 do {_unit addItemToBackpack "1Rnd_SmokeGreen_Grenade_shell";};
 			for "_i" from 1 to 10 do {_unit addItemToBackpack "1Rnd_SmokePurple_Grenade_shell";};
 			
-			_unit linkItem "TFAR_anprc152";
-			_unit linkItem "ACE_DK10_b";
+			_unit linkItem "ItemcTab";
 			
 		};
 		case "auf_d":
 		{
 
 			for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
-			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_DK10_b";};
+			for "_i" from 1 to 1 do {_unit addItemToVest "ItemcTab";};
 			_unit addBackpack "BWA3_PatrolPack_Fleck";
 			for "_i" from 1 to 1 do {_unit addItemToBackpack "ITC_Land_B_AR2i_Packed";};
 			_unit linkItem "B_UavTerminal";
@@ -355,13 +359,12 @@
 		{
 
 			for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
-			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_DK10_b";};
+			for "_i" from 1 to 1 do {_unit addItemToVest "ItemcTab";};
 			_unit addBackpack "BWA3_PatrolPack_Fleck";
 			for "_i" from 1 to 1 do {_unit addItemToBackpack "ITC_Land_B_AR2i_Packed";};
 			_unit linkItem "B_UavTerminal";
 
 			_unit setVariable ["ACE_IsEngineer",true,true];
-			_unit linkItem "TFAR_anprc152";
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
@@ -372,7 +375,7 @@
 		{
 
 			for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
-			_unit linkItem "ACE_DK10_b";
+			_unit linkItem "ItemcTab";
 
 			_backpack = "";
 			if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz")) then {_backpack = "BWA3_Kitbag_Fleck_Medic"};
@@ -404,8 +407,7 @@
 			for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 			
 			_unit setVariable ["ACE_IsEngineer",true,true];
-			_unit linkItem "TFAR_anprc152";
-			_unit linkItem "ACE_DK10_b";
+			_unit linkItem "ItemcTab";
 
 			_insignie = selectRandom _mannschafterArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};

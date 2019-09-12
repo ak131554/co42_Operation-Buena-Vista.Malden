@@ -144,22 +144,21 @@
 	_unit addHeadgear _headgear;
 
 	//Add magazines
-	for "_i" from 1 to 4 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
+	for "_i" from 1 to 4 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
 
 	//uniform base items
 	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 
 	//vest base items
-	for "_i" from 1 to 15 do {_unit addItemToVest "ACE_fieldDressing";};
 	for "_i" from 1 to 15 do {_unit addItemToVest "ACE_elasticBandage";};
-	for "_i" from 1 to 15 do {_unit addItemToVest "ACE_packingBandage";};
+	for "_i" from 1 to 30 do {_unit addItemToVest "ACE_packingBandage";};
 	for "_i" from 1 to 15 do {_unit addItemToVest "ACE_quikclot";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "ACE_tourniquet";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "ACE_morphine";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "ACE_epinephrine";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
+	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_XL50";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_green";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_DM25";};
@@ -235,9 +234,8 @@
 		case "san_c_p": 
 		{
 
-			for "_i" from 1 to 7 do {_unit addItemToBackpack "ACE_fieldDressing";};
 			for "_i" from 1 to 7 do {_unit addItemToBackpack "ACE_elasticBandage";};
-			for "_i" from 1 to 7 do {_unit addItemToBackpack "ACE_packingBandage";};
+			for "_i" from 1 to 14 do {_unit addItemToBackpack "ACE_packingBandage";};
 			for "_i" from 1 to 7 do {_unit addItemToBackpack "ACE_quikclot";};
 			for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_tourniquet";};
 			for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_morphine";};
@@ -259,9 +257,8 @@
 		case "san_kr":
 		{
 
-			for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_fieldDressing";};
 			for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_elasticBandage";};
-			for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_packingBandage";};
+			for "_i" from 1 to 30 do {_unit addItemToBackpack "ACE_packingBandage";};
 			for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_quikclot";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_tourniquet";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_morphine";};
@@ -350,9 +347,14 @@
 	//Add items
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
-	_unit linkItem "ACE_Altimeter";
+	if (_isFalli) then {
+		_unit linkItem "ACE_Altimeter";
+	}
+	else {
+		_unit linkItem "ItemWatch";
+	};
 	_unit linkItem "ACE_GD300_b";
-	//_unit linkItem "TFAR_anprc152";
+	_unit linkItem "TFAR_anprc152";
 
 	//Add another magazines
 	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
@@ -389,8 +391,6 @@
 		{
 
 			_unit setVariable ["ACE_IsEngineer",true,true];
-
-			_unit linkItem "TFAR_anprc152";
 			_unit setUnitRank "CORPORAL";
 
 		};
@@ -408,8 +408,6 @@
 
 			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_HelmetCam";};
 			_unit addWeapon "Rangefinder";
-
-			_unit linkItem "TFAR_anprc152";
 			_unit setUnitRank "SERGEANT";
 			
 		};
@@ -420,8 +418,6 @@
 			for "_i" from 1 to 3 do {_unit addItemToBackpack "BWA3_DM25";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "BWA3_DM32_Red";};
 			for "_i" from 1 to 2 do {_unit addItemToBackpack "BWA3_DM32_Green";};
-
-			_unit linkItem "TFAR_anprc152";
 			_unit setUnitRank "CORPORAL";
 
 		};
@@ -429,7 +425,6 @@
 		case "san_h":
 		{
 
-			_unit linkItem "TFAR_anprc152";
 			_unit setUnitRank "CORPORAL";
 
 		};

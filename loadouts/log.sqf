@@ -126,8 +126,8 @@
 
 	//Add magazines
 	if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
-		for "_i" from 1 to 4 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
-		for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
+		for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
+		for "_i" from 1 to 4 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
 		for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 	};
 	if (_tarn isEqualTo "army_d") then {
@@ -156,7 +156,7 @@
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_tourniquet";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_morphine";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
+	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_XL50";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_green";};
 
@@ -201,7 +201,12 @@
 	//Add items
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
-	_unit linkItem "ACE_Altimeter";
+	if (_isFalli) then {
+		_unit linkItem "ACE_Altimeter";
+	}
+	else {
+		_unit linkItem "ItemWatch";
+	};
 	_unit linkItem "TFAR_anprc152";
 
 	//Add another magazines
@@ -262,7 +267,7 @@
 		case "log_tf":
 		{
 
-			_unit linkItem "ACE_DK10_b";
+			_unit linkItem "ItemAndroid";
 			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_HelmetCam";};
 			if ((_tarn isEqualTo "fleck") or (_tarn isEqualTo "fleck_idz") or (_tarn isEqualTo "trope") or (_tarn isEqualTo "trope_idz") or (_tarn isEqualTo "winter") or (_tarn isEqualTo "winter_idz")) then {
 				_insignie = selectRandom _grpFhrArray;

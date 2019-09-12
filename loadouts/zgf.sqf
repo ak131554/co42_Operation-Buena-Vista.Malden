@@ -122,8 +122,8 @@
 	};
 
 	//Add magazines 
-	for "_i" from 1 to 4 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
-	for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
+	for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
+	for "_i" from 1 to 4 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
 
 	//uniform base items
 	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
@@ -138,7 +138,7 @@
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_tourniquet";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_morphine";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
+	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_XL50";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_green";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "B_IR_Grenade";};
@@ -219,8 +219,13 @@
 
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
-	_unit linkItem "ACE_Altimeter";
-	_unit linkItem "ACE_DK10_b";
+	if (_isFalli) then {
+		_unit linkItem "ACE_Altimeter";
+	}
+	else {
+		_unit linkItem "ItemWatch";
+	};
+	_unit linkItem "ItemcTab";
 	_unit linkItem "TFAR_anprc152";
 	
 	for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};

@@ -124,7 +124,7 @@
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_tourniquet";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_morphine";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
+	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_XL50";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
 	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_MapTools";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_green";};
@@ -171,8 +171,13 @@
 	//Add items
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
-	_unit linkItem "ACE_Altimeter";
-	_unit linkItem "ACE_DK10_b";
+	if (_isFalli) then {
+		_unit linkItem "ACE_Altimeter";
+	}
+	else {
+		_unit linkItem "ItemWatch";
+	};
+	_unit linkItem "ItemAndroid";
 	_unit linkItem "TFAR_anprc152";
 
 	//Add another magazine

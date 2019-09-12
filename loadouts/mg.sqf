@@ -178,7 +178,7 @@
 		case "mg_s":
 		{
 
-			for "_i" from 1 to 3 do {_unit addItemToBackpack "hlc_250Rnd_762x51_M_MG3";};
+			for "_i" from 1 to 1 do {_unit addItemToBackpack "hlc_250Rnd_762x51_M_MG3";};
 
 		};
 
@@ -203,24 +203,17 @@
 		case "mg_tf":
 		{
 
-			for "_i" from 1 to 4 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_Tracer";};
-			for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_Tracer";};
+			for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_Tracer";};
+			for "_i" from 1 to 4 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_Tracer";};
 
 		};
 
 		case "mg_a":
 		{
 
-			for "_i" from 1 to 4 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
-			for "_i" from 1 to 2 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
+			for "_i" from 1 to 2 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_AP";};
+			for "_i" from 1 to 4 do {_unit addItemToVest "BWA3_30Rnd_556x45_G36_AP";};
 
-		};
-		
-		case "mg_s":
-		{
-
-			for "_i" from 1 to 2 do {player addItemToUniform "hlc_50Rnd_762x51_M_MG3";};
-			
 		};
 		
 	};
@@ -236,8 +229,13 @@
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_tourniquet";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_morphine";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_MX991";};
-	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
+	for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Flashlight_XL50";};
+	if (toLower (_loadout) isEqualTo "mg_s") then {
+		for "_i" from 1 to 1 do {_unit addItemToUniform "ACE_NVG_Wide";};
+	}
+	else {
+		for "_i" from 1 to 1 do {_unit addItemToVest "ACE_NVG_Wide";};
+	};
 	for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_green";};
 	for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
 
@@ -264,7 +262,12 @@
 		};
 
 	};
-	_unit addItemToVest _helmet;
+	if (toLower (_loadout) isEqualTo "mg_s") then {
+		_unit addItemToUniform _helmet;
+	}
+	else {
+		_unit addItemToVest _helmet;
+	};
 
 	//Add weapons
 	switch toLower (_loadout) do
@@ -305,8 +308,13 @@
 	//Add items
 	_unit linkItem "ItemMap";
 	_unit linkItem "ItemCompass";
-	_unit linkItem "ACE_Altimeter";
-	//_unit linkItem "TFAR_anprc152";
+	if (_isFalli) then {
+		_unit linkItem "ACE_Altimeter";
+	}
+	else {
+		_unit linkItem "ItemWatch";
+	};
+	_unit linkItem "TFAR_anprc152";
 
 	_grpFhrArray = 
 	[
@@ -356,8 +364,6 @@
 			_insignie = selectRandom _grpFhrArray;
 			[_unit,_insignie] spawn {params ["_unit","_insignie"];uiSleep 20;[_unit,_insignie] call bis_fnc_setUnitInsignia;};
 			_unit setUnitRank "SERGEANT";
-
-			_unit linkItem "TFAR_anprc152";
 			
 		};
 
@@ -385,9 +391,8 @@
 		case "mg_s":
 		{
 
-			for "_i" from 1 to 1 do {_unit addItemToBackpack "hlc_250Rnd_762x51_M_MG3";};
-			for "_i" from 1 to 2 do {_unit addItemToUniform "hlc_50Rnd_762x51_M_MG3";};
 			for "_i" from 1 to 1 do {_unit addItemToBackpack "hlc_100Rnd_762x51_M_MG3";};
+			for "_i" from 1 to 1 do {_unit addItemToBackpack "hlc_250Rnd_762x51_M_MG3";};
 
 			for "_i" from 1 to 3 do {_unit addItemToVest "BWA3_DM25";};
 

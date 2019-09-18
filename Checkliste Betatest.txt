@@ -1,3 +1,21 @@
-* Jip
-* Jokotent
-* Spawn APC
+* Struktur in Lobby entspricht Truppstruktur im Briefing - check
+* Jip und Respawn - respawn check, jip falsche Position
+* Kistenscript - check
+* Kisten tragen und Sachen rausnehmen - check
+* Jokotent - check
+* Repair animation - fehler
+* Spawn APC - checked
+* Prevent APC Spawn - checked
+* Spawn Heli - check
+* Spawn LKW - check
+* Retreat patr to roadblock - check
+* Retreat APC to arudy (inkl. nicht ausführen bei AIR) - klappt nicht
+* Einheiten auf HC - checked
+* Medic Facility und Fahrzeuge testen - check
+* Sani und Ärzte sind Medics - check
+* Zeuse funktionieren (jemand anderes braucht #vote admin) -check
+* Reichweite der Longrange - check
+
+MG für Fuchs nur 6000
+AH-64 in grün
+Platin braucht speziellen Helm "rhsusf_ihadss"

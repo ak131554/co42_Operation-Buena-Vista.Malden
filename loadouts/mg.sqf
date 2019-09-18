@@ -353,7 +353,7 @@
 
 			};
 			
-			_unit linkItem "ACE_GD300_b";
+			_unit linkItem "ItemAndroid";
 
 			for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Purple";};
 			for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Red";};

@@ -368,7 +368,7 @@
 			for "_i" from 1 to 1 do {_unit addItemToVest "DemoCharge_Remote_Mag";};
 			//
 
-			_unit linkItem "ACE_GD300_b";
+			_unit linkItem "ItemAndroid";
 			_unit addWeapon "Rangefinder";
 			for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Purple";};
 			for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Red";};

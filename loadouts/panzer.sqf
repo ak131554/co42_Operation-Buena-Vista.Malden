@@ -474,7 +474,7 @@
 
 			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_MapTools";};
 			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_RangeTable_82mm";};
-			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_GD300_b";};
+			for "_i" from 1 to 1 do {_unit addItemToVest "ItemAndroid";};
 			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_Vector";};
 			for "_i" from 1 to 1 do {_unit addItemToVest "ACE_microDAGR";};
 

@@ -17,7 +17,7 @@
 
 		gameType = "coop";
 		minPlayers = "1";
-		maxPlayers = "56";
+		maxPlayers = "45";
 
 	};
 

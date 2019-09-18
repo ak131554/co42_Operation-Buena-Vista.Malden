@@ -173,7 +173,7 @@
 	_headgear = "";
 	if ((_tarn isEqualTo "army_d") or (toLower(_loadout) isEqualTo "pilot_p")) then
 	{
-		_headgear = selectRandom ["rhsusf_hgu56p_visor_black", "rhsusf_hgu56p_black"];
+		_headgear = "rhsusf_ihadss";
 	}
 	else
 	{

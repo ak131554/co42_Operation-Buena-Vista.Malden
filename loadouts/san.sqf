@@ -353,7 +353,7 @@
 	else {
 		_unit linkItem "ItemWatch";
 	};
-	_unit linkItem "ACE_GD300_b";
+	_unit linkItem "ItemAndroid";
 	_unit linkItem "TFAR_anprc152";
 
 	//Add another magazines

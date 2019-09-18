@@ -1,5 +1,4 @@
 
-
 {
 
 	_x params ["_teleporter"];
@@ -23,4 +22,4 @@ forEach
 
 ];
 
-if (didJIP) then {player setPosASL (getPosASL respawn);};
+if (didJIP) then {player setPos (getMarkerPos "respawn");};

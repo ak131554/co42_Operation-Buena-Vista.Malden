@@ -325,7 +325,7 @@
 			for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_30Rnd_556x45_G36_Tracer";};
 			for "_i" from 1 to 1 do {_unit addItemToUniform "BWA3_15Rnd_9x19_P8";};
 			
-			_unit linkItem "ACE_GD300_b";
+			_unit linkItem "ItemAndroid";
 
 			for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Purple";};
 			for "_i" from 1 to 1 do {_unit addItemToVest "BWA3_DM32_Red";};
